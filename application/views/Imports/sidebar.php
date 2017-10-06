@@ -55,7 +55,7 @@
                     <li><a href="#"><i class="fa fa-circle-o"></i> Add/Remove Stocks</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> View Stocks</a>
                     </li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Add Stock Items</a></li>
+                    <li><a href="<?php echo base_url(); ?>index.php/product"><i class="fa fa-circle-o"></i> Add Products</a></li>
                 </ul>
             </li>
             <!-- Stocks -->
