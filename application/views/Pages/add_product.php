@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <?php if (isset($error_message)){?>
+            <?php if (isset($error_message)){ ?>
                 <div class="alert alert-danger alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                     <h4><i class="icon fa fa-ban"></i></h4>Invalid filed inputs
@@ -34,8 +34,8 @@
             <?php } ?>
             <!-- /.box-header -->
             <div class="box-body">
+                <form role="form" method="post" action="<?php echo base_url(); ?>index.php/product/add_newProduct">
                 <div class="row">
-
                         <div class="form-group col-lg-3">
                             <label for="item_no">Item No</label>
                             <input type="number" name="item_no" class="form-control" placeholder="Enter Item number">
@@ -43,23 +43,22 @@
                         <!-- /.form-group -->
                         <div class="form-group col-lg-4">
                             <label for="item_no">Item Description</label>
-                            <input type="text" name="item_name" class="form-control" placeholder="Enter Stock Item name">
+                            <input type="text" name="item_name"  class="form-control" placeholder="Enter Stock Item name">
                         </div>
                         <!-- /.form-group -->
-                        <div class="form-group col-lg-2">
+                        <div class="form-group col-lg-3">
                             <label for="item_price">Item Price</label>
-                            <input type="text" name="item_price" class="form-control" placeholder="Enter Price">
+                            <input type="number" name="item_price" class="form-control" placeholder="Enter Stock Item price">
                         </div>
-
-
                 </div>
                 <div class="row">
                     <!-- /.form-group -->
                     <div class="col-lg-2" style="float: right">
                         <br>
-                        <a href="<?php echo base_url();?>index.php/product/add_stock"><button type="submit button" class="btn btn-block btn-success"><i class="fa fa-plus-square"> Add Stock Item</i></button></a>
+                        <button type="submit button" class="btn btn-block btn-success"><i class="fa fa-plus-square"> Add Stock Item</i></button>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
 
@@ -75,6 +74,8 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
+
+                <form role="form" method="post" action="<?php echo base_url(); ?>index.php/product/set_product">
                 <div class="row">
                     <div class="form-group col-sm-4">
                         <input type="text" name="q" class="form-control" placeholder="Search...">
@@ -111,14 +112,15 @@
                     <!-- /.form-group -->
                     <div class="col-lg-2" style="float: right">
                         <br>
-                        <a href=""><button type="submit button" class="btn btn-block btn-danger"><i class="fa fa-minus-square"> Remove Stock Item</i></button></a>
+                        <a href=""><button type="submit button" value="remove" class="btn btn-block btn-danger"><i class="fa fa-minus-square"> Remove Stock Item</i></button></a>
                     </div>
                     <!-- /.form-group -->
                     <div class="col-lg-2" style="float: right">
                         <br>
-                        <a href=""><button type="submit button" class="btn btn-block btn-primary"><i class="fa  fa-check-circle"> Update Stock Item</i></button></a>
+                        <a href=""><button type="submit button" value="update" class="btn btn-block btn-primary" ><i class="fa  fa-check-circle"> Update Stock Item</i></button></a>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
 
