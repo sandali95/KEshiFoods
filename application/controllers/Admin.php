@@ -16,12 +16,12 @@ class Admin extends CI_Controller{
 		$this->form_validation->set_rules('etype','Employee Type','required');
 
 		if($this->form_validation->run()==True){
-			$this->load->model('model_admin');
+			$this->load->model('Model_admin');
 			$this->model_admin->insertdata();
 			//$this->get_data();
-			$this->load->model('model_admin');
-			$data=$this->model_admin->fetch_data();
-			$this->load->view('view_data',array('data' => $data));
+			//$this->load->model('Model_admin');
+			//$data=$this->model_admin->fetch_data();
+			//$this->load->view('view_data',array('data' => $data));
 
 			
 	
@@ -31,8 +31,8 @@ class Admin extends CI_Controller{
 		}
 	}
 	public function get_data(){
-		$this->load->model('model_admin');
-		$fetch_data=$this->model_admin->fetch_data();
+		$this->load->model('Model_admin');
+		$fetch_data=$this->Model_admin->fetch_data();
 		$data =array(
 			'emp'=>$fetch_data
 		);
@@ -42,7 +42,7 @@ class Admin extends CI_Controller{
 	public function search_data(){
 		$this->form_validation->set_rules('name','Name','required');
 		if($this->form_validation->run()==True){
-			$this->load->model('model_admin');
+			$this->load->model('Model_admin');
 			$this->model_admin->search_data();
 		}
 	}
