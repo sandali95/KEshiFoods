@@ -75,7 +75,7 @@
             <!-- /.box-header -->
             <div class="box-body">
 
-                <form role="form" method="post" id ="update_form" action="<?php echo base_url(); ?>index.php/product/update">
+                <form role="form" method="post"  action="<?php echo base_url(); ?>index.php/product/update">
 
                 <br>
                <div class="row">
@@ -94,7 +94,7 @@
                    </div>
                </div></br>
 
-                <div class="row">
+                <div class="row" id ="update_form">
 
                     <div class="form-group col-lg-3">
                         <label for="item_no">Item No</label>
@@ -190,8 +190,8 @@
                 url: "<?php echo base_url(); ?>index.php/Product/add_values/",
                 data : {name:itemname},
                 success: function(data) {
-                    console.log('Hello :D');
-                    console.log(data.product);
+                    /*console.log('Hello :D');
+                    console.log(data.product);*/
                     $("#update_form").html(data);
                 },
                 error: function (data) {

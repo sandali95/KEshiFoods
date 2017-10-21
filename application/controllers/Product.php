@@ -92,16 +92,19 @@ class Product extends CI_Controller {
 
     public function add_values()
     {
-        echo "
-            <script>
-                console.log('Hello');
-            </script>
-        ";
-
+        $data ="";
         $this->load->model('Product_model');
         $item_name = $this->input->post('name');
 
-        $data['product'] = $this->Product_model->get_productbyid($item_name);
+        $result['product'] = $this->Product_model->get_productbyid($item_name);
+        //var_dump($result['product']['0']['item_name']);
+
+        $data .='<tr>
+                <td>' . $result['product']['0']['item_name'] . '</td>
+                <td>' . $result['product']['0']['item_name'] . '</td>
+                <td>' . $result['product']['0']['item_name'] . '</td>
+                <td>' . $result['product']['0']['item_name'] . '</td>
+            </tr>';;
 
         echo json_encode($data);
 

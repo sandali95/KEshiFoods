@@ -18,11 +18,8 @@
         <ul class="sidebar-menu" data-widget="tree">
 
             <li class="active treeview">
-                <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                    <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                <a href="<?php echo base_url(); ?>index.php/Welcome">
+                    <i class="fa fa-dashboard"></i> Dashboard
                 </a>
 
             </li>
