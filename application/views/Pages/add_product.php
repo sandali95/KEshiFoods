@@ -15,7 +15,7 @@
     <section class="content">
 
         <!-- Add Products -->
-        <div class="box box-default">
+        <div class="box tbox-default">
             <div class="box-header with-border">
                 <h3 class="box-title">Add Products</h3>
 
@@ -75,7 +75,7 @@
             <!-- /.box-header -->
             <div class="box-body">
 
-                <form role="form" method="post" action="<?php echo base_url(); ?>index.php/product/update">
+                <form role="form" method="post" id ="update_form" action="<?php echo base_url(); ?>index.php/product/update">
 
                 <br>
                <div class="row">
@@ -93,24 +93,6 @@
                        </select>
                    </div>
                </div></br>
-                    <!-- script to get values dynamically-->
-                    <script type="text/javascript">
-                        $("#item_name").onchange(function() {
-                            $.ajax({
-                                type: "POST",
-                                url: "<?php echo base_url(); ?>/Product/add_values",
-                                data : $("#item_name").val(),
-                                success: function(data) {
-                                    $("#customers-list").html(data);
-                                }
-                            });
-                        });
-                    </script>
-
-
-
-
-
 
                 <div class="row">
 
@@ -156,7 +138,7 @@
             <!-- /.box-header -->
             <div class="box-body">
 
-                <form role="form" method="post" action="<?php echo base_url(); ?>index.php/product/remove">
+                <form role="form" method="post" id="remove_form" action="<?php echo base_url(); ?>index.php/Product/remove">
 
                     <br>
 
@@ -195,3 +177,26 @@
 
 
 </section>
+    <!-- jQuery 3 -->
+    <script src="<?php echo base_url()?>assets/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="<?php echo base_url()?>assets/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <!-- script to get values dynamically-->
+    <script type="text/javascript">
+        $("#item_name").change(function() {
+            var itemname = $("#item_name").val();
+            $.ajax({
+                type: "POST",
+                url: "<?php echo base_url(); ?>index.php/Product/add_values/",
+                data : {name:itemname},
+                success: function(data) {
+                    console.log('Hello :D');
+                    console.log(data.product);
+                    $("#update_form").html(data);
+                },
+                error: function (data) {
+                    console.log('error');
+                }
+            });
+        });
+    </script>

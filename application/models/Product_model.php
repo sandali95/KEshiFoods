@@ -42,4 +42,11 @@ class Product_model extends CI_Controller {
         return $items;
     }
 
+    public function get_productbyid($item_name)
+    {
+        $this->db->where('item_name',$item_name);
+        $result =$this->db->get('product');
+        return $result->result_array();
+    }
+
 }

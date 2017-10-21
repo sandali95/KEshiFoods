@@ -57,6 +57,8 @@ class Product extends CI_Controller {
 
     public function remove(){
         $this->load->model('Product_model');
+
+
         $item_id = $this->input->post('item_no');
         $this->Product_model->remove_product($item_id);
     }
@@ -90,6 +92,18 @@ class Product extends CI_Controller {
 
     public function add_values()
     {
+        echo "
+            <script>
+                console.log('Hello');
+            </script>
+        ";
+
+        $this->load->model('Product_model');
+        $item_name = $this->input->post('name');
+
+        $data['product'] = $this->Product_model->get_productbyid($item_name);
+
+        echo json_encode($data);
 
     }
 

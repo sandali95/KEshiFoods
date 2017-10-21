@@ -69,7 +69,7 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Add Employee</a></li>
+                    <li><a href="<?php echo base_url(); ?>index.php/Admin/index"><i class="fa fa-circle-o"></i> Add Employee</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> Add Payments</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> View Payments</a></li>
                 </ul>
