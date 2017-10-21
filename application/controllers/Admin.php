@@ -3,7 +3,7 @@ class Admin extends CI_Controller{
 	public function index(){
 		//$res=$this->get_data();
 
-		$this->load->view('em');
+		$this->load->view('employee');
 		//echo "$result";
 	}
 
@@ -17,8 +17,8 @@ class Admin extends CI_Controller{
 
 		if($this->form_validation->run()==True){
 			$this->load->model('Model_admin');
-			$this->model_admin->insertdata();
-			//$this->get_data();
+			$this->Model_admin->insertdata();
+			$this->load->view('employee.php');
 			//$this->load->model('Model_admin');
 			//$data=$this->model_admin->fetch_data();
 			//$this->load->view('view_data',array('data' => $data));
@@ -27,7 +27,8 @@ class Admin extends CI_Controller{
 	
 		}
 		else{
-			$this->load->view('emp_reg.php');
+		
+			$this->load->view('employee.php');
 		}
 	}
 	public function get_data(){
@@ -43,7 +44,7 @@ class Admin extends CI_Controller{
 		$this->form_validation->set_rules('name','Name','required');
 		if($this->form_validation->run()==True){
 			$this->load->model('Model_admin');
-			$this->model_admin->search_data();
+			$this->Model_admin->search_data();
 		}
 	}
 }

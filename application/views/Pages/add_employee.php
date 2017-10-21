@@ -38,7 +38,7 @@
 
 
             <div class="box-body">
-                <form role="form" method="post" action="<?php echo base_url(); ?>index.php/admin/emp_register">
+                <form role="form" method="post" action="<?php echo base_url(); ?>index.php/Admin/emp_register">
                 <div class="row">
 
                     <!--<div class="form-group col-lg-4">
@@ -58,7 +58,7 @@
                     </div>-->
                     <div class="form-group col-lg-4">
                         <label for="Name">Name</label>  
-                        <input type="text" name="Name" class="form-control" placeholder="Employee Name">
+                        <input type="text" name="name" class="form-control" placeholder="Employee Name">
                     </div>
 
                 </div>
