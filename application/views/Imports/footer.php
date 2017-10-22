@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <div>
     <footer class="main-footer" xmlns="http://www.w3.org/1999/html" style="margin-left: 0px !important;">
         <div class="pull-right hidden-xs">
@@ -9,7 +9,6 @@
         reserved.
     </footer>
 </div>
-=======
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
         <b>Version</b> 2.4.0
@@ -17,4 +16,4 @@
     <strong>Copyright © 2014-2016 <a href="https://adminlte.io">KeshiFoods</a>.</strong> All rights
     reserved.
 </footer>
->>>>>>> aa07fe1a5210ca619b11a033b59095f8c6345b64
+
