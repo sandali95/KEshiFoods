@@ -82,15 +82,7 @@
                         <label>Employee Type :</label>
                         <input type="text" name="etype" class="form-control" placeholder="Employee Type">
                     </div>
-                <div class="row">
-                    <div class="form-group col-lg-4">
-                        <label for="Operation">Operation</label>
-                        <a href="#">Update</a> 
-                        <a href="#">Delete</a>
-
-
-                    </div>
-                </div>
+                
                     <div class="col-lg-2" style="float: right">
                         <br>
                         <a href=""><button type="submit button" class="btn btn-block btn-success"><i class="fa fa-plus-square"> Register</i></button></a>
