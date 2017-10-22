@@ -32,10 +32,11 @@ class Stock extends CI_Controller
         if($this->form_validation->run() == False)
         {
             $data =array(
-                'stock'=>$this->Stock_model->current_stock()
+                'stock'=>$this->Stock_model->current_stock(),
+                'error_message' =>'error'
             );
-            $msg['error_message']='error';
-            $this->load->view('stock',$data,$msg);
+
+            $this->load->view('stock',$data);
             return;
         }
 
@@ -43,6 +44,7 @@ class Stock extends CI_Controller
         $item_quantity =$this->input->post('item_quantity');
         $invoice_no =$this->input->post('invoice_no');
         $invoice_date =$this->input->post('invoice_date');
+        var_dump($invoice_date);
 
         $item_no =$this->Stock_model->get_itemNo($item_name);//get the item number from the db
         $data=array(
@@ -63,10 +65,12 @@ class Stock extends CI_Controller
 
         $stock =array(
             'tot_quantity'=>$item_quantity+$quantity,
+            'lastUpdated' =>$invoice_date
         );
 
 
         $this->Stock_model->add_stockItem($data,$stock);
+        redirect('/Stock');
     }
 
     public function remove_stock()
@@ -81,10 +85,11 @@ class Stock extends CI_Controller
         if($this->form_validation->run() == False)
         {
             $data =array(
-                'stock'=>$this->Stock_model->current_stock()
+                'stock'=>$this->Stock_model->current_stock(),
+                'error_message2'=>'error'
             );
-            $remove_msg['error_message2']='error';
-            $this->load->view('stock',$data,$remove_msg);
+
+            $this->load->view('stock',$data);
             return;
         }
 

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Stock_model extends CI_Controller {
 
     public function add_stockItem($data,$stock)
-    {  //update the stock quantity
+    {//update the stock quantity
         $this->db->insert('purchase',$data);
         $this->db->update('stock', $stock, array('stock_id' =>$data['stock_id']));
 

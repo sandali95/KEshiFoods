@@ -29,7 +29,7 @@ class Product extends CI_Controller {
         $this->load->model('Product_model');
 
         $this->form_validation->set_rules('item_name','Item Name','required');
-        $this->form_validation->set_rules('item_price','Item Price','required');
+        $this->form_validation->set_rules('item_price','Item Price','required|regex_match[/^[0-9]{9}[vV]$/]');
 
         if($this->form_validation->run() == False){
             $data['error_message']='error';
@@ -51,14 +51,19 @@ class Product extends CI_Controller {
         );
 
         $this->Product_model->add_newProduct($data);
+        redirect('/Product');
 
 
     }
 
-    public function remove(){
+    public function remove($item_name){
+        echo "<h2>jufsdhgks</h2>";
         $this->load->model('Product_model');
-        $item_id = $this->input->post('item_no');
-        $this->Product_model->remove_product($item_id);
+
+
+//        $item_name = $this->input->post('item_name');
+        $this->Product_model->remove_product($item_name);
+        redirect('/Product');
     }
 
     public function update(){
@@ -86,10 +91,43 @@ class Product extends CI_Controller {
         );
 
         $this->Product_model->update_product($data);
+        redirect('/Product');
     }
 
-    public function add_values()
+    public function add_valuesforupdate()
     {
+
+        $this->load->model('Product_model');
+        $item_name = $this->input->post('name');
+
+        $result= $this->Product_model->get_productbyid($item_name);
+        $data=array(
+            'item_no'=>$result['0']['item_id'],
+            'item_name'=>$result['0']['item_name'],
+            'item_price'=>$result['0']['item_price']
+        );
+
+
+        $String = $this->load->view('Pages/update_product_form',($data),'TRUE');
+
+        echo json_encode($String);
+
+    }
+
+    public function add_valuesforremove()
+    {
+
+        $this->load->model('Product_model');
+        $item_name = $this->input->post('item_name');
+        var_dump($item_name);
+
+        $result['product'] = $this->Product_model->get_productbyid($item_name);
+        var_dump($result['product']['0']['item_name']);
+
+        $data =$result['product']['0']['item_id'];
+
+
+        echo json_encode($data);
 
     }
 
