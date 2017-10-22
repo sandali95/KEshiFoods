@@ -37,7 +37,7 @@ class Admin extends CI_Controller{
 		$data =array(
 			'emp'=>$fetch_data
 		);
-		$this->load->view('view_data',$data);
+		$this->load->view('viewEmployee',$data);
 		//return $fetch_data;
 	}
 	public function search_data(){
