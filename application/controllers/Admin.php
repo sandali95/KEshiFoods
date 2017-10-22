@@ -53,14 +53,4 @@ class Admin extends CI_Controller{
 
 		//return $fetch_data;
 	}
-	public function search_data(){
-		$this->form_validation->set_rules('name','Name','required');
-		if($this->form_validation->run()==True){
-
-			$this->load->model('model_admin');
-			$this->model_admin->search_data();
-			$this->load->model('Model_admin');
-			$this->Model_admin->search_data();
-		}
-	}
 }
