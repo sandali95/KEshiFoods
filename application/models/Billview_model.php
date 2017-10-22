@@ -3,21 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Billview_model extends CI_Controller {
 
-    public function add_stockItem($data,$bill)
-    {  //update the stock quantity
-        $this->db->insert('purchase',$data);
-        $this->db->update('stock', $stock, array('stock_id' =>$data['stock_id']));
 
-    }
-
-    public function remove_stockItem($data)
-    { //update(remove) the stock quantity
-        $this->db->update('stock', $data, array('stock_id' =>$data['stock_id']));
-    }
-
-    public function get_quantity($id)
+    public function get_bill()
     { //get the current quantity of item by id
-       $result = $this->db->get_where('stock',array('stock_id'=>$id));
+       $result = $this->db->get('bill');
         if($result->num_rows()>0)
         {
             return $result->result_array();
