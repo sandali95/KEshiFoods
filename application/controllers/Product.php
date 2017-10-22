@@ -53,26 +53,13 @@ class Product extends CI_Controller {
 
     }
 
-    public function set_product()
-    {
-        $item_name = $this->input->post('item_name');
 
-        if(!empty($_POST['remove_btn']))
-        {
-            $this->remove($item_name);
-        }
 
-        if(!empty($_POST['update_btn']))
-        {
-            $this->update($item_name);
-        }
-    }
-
-    public function remove($item_name)
+    public function remove($id)
     {   echo "<h1>Remove</h1>";
         $this->load->model('Product_model');
 //      $item_name = $this->input->post('item_name');
-        $this->Product_model->remove_product($item_name);
+        $this->Product_model->remove_product($id);
         redirect('/Product');
     }
 
@@ -80,12 +67,14 @@ class Product extends CI_Controller {
     public function update()
     {
         $this->load->model('Product_model');
+        $products = $this->Product_model->current_products();
 
         $this->form_validation->set_rules('item_name','Item Name','required');
         $this->form_validation->set_rules('item_price','Item Price','required');
 
         if($this->form_validation->run() == False){
-            $data['error_message']='error';
+            $data['error_update']='error';
+            $data['products'] = $products;
             $this->load->view('product',$data);
             return;
         }

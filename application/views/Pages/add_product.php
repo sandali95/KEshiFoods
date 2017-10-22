@@ -75,7 +75,7 @@
             <!-- /.box-header -->
             <div class="box-body">
 
-                <form role="form" method="post"  action="<?php echo base_url();?>index.php/Product/set_product">
+                <form role="form" method="get" >
 
                 <br>
                <div class="row">
@@ -84,7 +84,7 @@
                    </div>
 
                    <div class="form-group col-lg-4">
-                       <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name= "item_name"id="item_name">
+                       <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name= "id" id="item_name">
                            <option>Enter Item Descrition</option>
                            <?php foreach ($products as $a){ ?>
                                <option>
@@ -102,12 +102,12 @@
                     <!-- /.Update Button -->
                     <div class="col-lg-2" style="float: right">
                         <br>
-                        <a href="" class="btn btn-block btn-primary" name="update_btn" ><i class="fa  fa-check-circle"> Update Stock</i></a>
+                        <a href="<?php echo base_url();?>index.php/Product/update?id=$id" class="btn btn-block btn-primary" name="update_btn" ><i class="fa  fa-check-circle"> Update Stock</i></a>
                     </div>
                     <!-- /.Remove Button -->
                     <div class="col-lg-2" style="float: right">
                         <br>
-                        <a href="" class="btn btn-block btn-danger" name="remove_btn" ><i class="fa  fa-check-circle"> Remove Stock </i></a>
+                        <a href="<?php echo base_url();?>index.php/Product/remove?id=$id" class="btn btn-block btn-danger" name="remove_btn" ><i class="fa  fa-check-circle"> Remove Stock </i></a>
                     </div>
                 </div>
                 </form>

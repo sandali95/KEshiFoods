@@ -32,10 +32,9 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"> <i class="fa fa-circle-o"></i> Add a bill</a></li>
+                    <li><a href="<?php echo base_url(); ?>index.php/Bill"> <i class="fa fa-circle-o"></i> Add a bill</a></li>
                     <li><a href="<?php echo base_url(); ?>index.php/View_bills/index"><i class="fa fa-circle-o"></i> View Bills</a>
                     </li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
                 </ul>
             </li>
             <!-- Sales -->
@@ -69,7 +68,7 @@
 
                     <li><a href="<?php echo base_url(); ?>index.php/Admin"><i class="fa fa-circle-o"></i> Add Employee</a></li>
                     <li><a href="<?php echo base_url(); ?>index.php/Admin/get_data"><i class="fa fa-circle-o"></i> View Employee</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Add Payments</a></li>
+                    <li><a href="<?php echo base_url(); ?>index.php/Payment"><i class="fa fa-circle-o"></i> Add Payments</a></li>
                     <li><a href="<?php echo base_url(); ?>index.php/View_payments"><i class="fa fa-circle-o"></i> View Payments</a></li>
                 </ul>
             </li>
