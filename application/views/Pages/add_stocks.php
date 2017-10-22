@@ -28,7 +28,7 @@
             <?php if (isset($error_message)){?>
                 <div class="alert alert-danger alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-ban"></i></h4>Invalid filed inputs
+                    <h5><i class="icon fa fa-ban">Invalid Field Inputs !</i></h5>
 
                 </div>
             <?php } ?>
@@ -86,7 +86,7 @@
                     <!-- /.form-group -->
                     <div class="col-lg-2" style="float: right">
                         <br>
-                        <a href=""><button type="submit button" class="btn btn-block btn-success"><i class="fa fa-plus-square"> Add Stock Item</i></button></a>
+                        <a href=""><button type="submit button" class="btn btn-block btn-success"><i class="fa fa-plus-square"> Add Stock</i></button></a>
                     </div>
 
                 </div>
@@ -110,7 +110,7 @@
             <?php if (isset($error_message2)){?>
                 <div class="alert alert-danger alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-ban"></i></h4>Invalid filed inputs
+                    <h5><i class="icon fa fa-ban"></i>Invalid Field Inputs !</h5>
 
                 </div>
             <?php } ?>
