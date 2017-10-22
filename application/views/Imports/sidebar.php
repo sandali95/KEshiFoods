@@ -18,11 +18,8 @@
         <ul class="sidebar-menu" data-widget="tree">
 
             <li class="active treeview">
-                <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                    <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                <a href="<?php echo base_url(); ?>index.php/Welcome">
+                    <i class="fa fa-dashboard"></i> Dashboard
                 </a>
 
             </li>
@@ -35,8 +32,13 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
+<<<<<<< HEAD
+                    <li><a href="<?php echo base_url(); ?>index.php/Bill"> <i class="fa fa-circle-o"></i> Add a bill</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> View Bills</a>
+=======
                     <li><a href="#"> <i class="fa fa-circle-o"></i> Add a bill</a></li>
-                    <li><a href="<?php echo base_url(); ?>index.php/View_bills"><i class="fa fa-circle-o"></i> View Bills</a>
+                    <li><a href="<?php echo base_url(); ?>index.php/View_bills/index"><i class="fa fa-circle-o"></i> View Bills</a>
+>>>>>>> aa07fe1a5210ca619b11a033b59095f8c6345b64
                     </li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
                 </ul>
@@ -69,8 +71,12 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
+<<<<<<< HEAD
+                    <li><a href="<?php echo base_url(); ?>index.php/Admin"><i class="fa fa-circle-o"></i> Add Employee</a></li>
+=======
                     <li><a href="<?php echo base_url(); ?>index.php/Admin/index"><i class="fa fa-circle-o"></i> Add Employee</a></li>
                     <li><a href="<?php echo base_url(); ?>index.php/Admin/get_data"><i class="fa fa-circle-o"></i> View Employee</a></li>
+>>>>>>> ad1d55e8bc994616d827ee3832f46bf2d54abc03
                     <li><a href="#"><i class="fa fa-circle-o"></i> Add Payments</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> View Payments</a></li>
                 </ul>

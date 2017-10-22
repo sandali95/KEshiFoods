@@ -19,7 +19,7 @@
     <?php include "Imports/sidebar.php" ?>
 
     <!-- Content Wrapper. Contains page content -->
-    <?php include "Pages/view_bill.php" ?>
+    <?php include "Pages/bill_add.php" ?>
 
     <!-- Footer -->
     <?php include "Imports/footer.php" ?>

@@ -43,7 +43,11 @@
 
 
             <div class="box-body">
+<<<<<<< HEAD
+                <form role="form" method="post" action="<?php echo base_url(); ?>index.php/admin/emp_register">
+=======
                 <form role="form" method="post" action="<?php echo base_url(); ?>index.php/Admin/emp_register">
+>>>>>>> ad1d55e8bc994616d827ee3832f46bf2d54abc03
                 <div class="row">
 
                     <!--<div class="form-group col-lg-4">
@@ -63,7 +67,11 @@
                     </div>-->
                     <div class="form-group col-lg-4">
                         <label for="Name">Name</label>  
+<<<<<<< HEAD
+                        <input type="text" name="Name" class="form-control" placeholder="Employee Name">
+=======
                         <input type="text" name="name" class="form-control" placeholder="Employee Name">
+>>>>>>> ad1d55e8bc994616d827ee3832f46bf2d54abc03
                     </div>
                    
 

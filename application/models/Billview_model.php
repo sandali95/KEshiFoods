@@ -1,57 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Bill_model extends CI_Controller {
-
-    public function Insert_data()
-    {
-        $data=  array(
-
-        'bill_no'=> $this->input->post('bill_no',TRUE),
-        'date'=> $this->input->post('date'),
-        'customer_name'=> $this->input->post('cname',TRUE),
-        'total_val'=> $this->input->post('tvalue',TRUE)
-        
-
-
-
-
-
-         );
-
-        return $this->db->insert( 'bill',$data);
-            //$this->load->view('login1');
-
-    }
-
-    public function fetch_data()
-    {
-      $query= $this->db->get('bill');
-      return $query->result_array();
-
-    }
-
-}
-
-
-
 class Billview_model extends CI_Controller {
 
-    public function add_stockItem($data,$bill)
-    {  //update the stock quantity
-        $this->db->insert('purchase',$data);
-        $this->db->update('stock', $stock, array('stock_id' =>$data['stock_id']));
 
-    }
-
-    public function remove_stockItem($data)
-    { //update(remove) the stock quantity
-        $this->db->update('stock', $data, array('stock_id' =>$data['stock_id']));
-    }
-
-    public function get_quantity($id)
+    public function get_bill()
     { //get the current quantity of item by id
-       $result = $this->db->get_where('stock',array('stock_id'=>$id));
+       $result = $this->db->get('bill');
         if($result->num_rows()>0)
         {
             return $result->result_array();
@@ -101,4 +56,3 @@ class Billview_model extends CI_Controller {
 
 
 }
-

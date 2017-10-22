@@ -5,8 +5,8 @@ class View_bills extends CI_Controller
 {
     public function index()
     {
-        $this->load->model('Bill_model');
-        $bill =$this->Bill_model->get_billRecords();
+        $this->load->model('Billview_model');
+        $bill =$this->Billview_model->get_bill();
        // var_dump($stock);
         $data =array(
             'bill'=>$bill
@@ -15,14 +15,7 @@ class View_bills extends CI_Controller
         $this->load->view('viewbills',$data);
     }
 
-    public function view_item($id,$name)
-    {
-        $this->load->model('Bill_model');
-        $items = $this->Bill_model->get_purchaseRecords($id);
-
-        $this->load->view('viewStockItem',array('item'=>$items,'name'=>$name));
-    }
-
+   
 
 
 }

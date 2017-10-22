@@ -25,6 +25,7 @@
                                 <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Stock Item No</th>
                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Stock Item Name</th>
                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Quantity</th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Last Updated Date</th>
                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">View</th></tr>
                             </thead>
                             <tbody>
@@ -33,7 +34,8 @@
                                     <td class="sorting_1"><?php echo $a['stock_id']?></td>
                                     <td><?php echo $a['stock_name']?></td>
                                     <td><?php echo $a['tot_quantity']?></td>
-                                    <td> <a href="<?php echo base_url();?>index.php/View_stocks/view_item/<?php echo $a['stock_id']?>/<?php echo $a['stock_name']?>"><i class="fa fa-info-circle"></i></a></td>
+                                    <td><?php echo $a['lastUpdated']?></td>
+                                    <td> <a href="<?php echo base_url();?>index.php/View_stocks/view_item/<?php echo $a['stock_id']?>/<?php echo $a['stock_name']?>"><center><i class="fa fa-info-circle"></i></center></a></td>
                                 </tr>
                             <?php } ?>
 

@@ -17,11 +17,10 @@ class Product_model extends CI_Controller {
         $this->db->select_max('item_id');
         $result = $this->db->get('product');
 
-        if($result->num_rows()>0){
+        if($result->num_rows()>0)
+        {
             return $result->result_array();
         }
-
-
 
     }
     public function update_product($data)
@@ -31,7 +30,9 @@ class Product_model extends CI_Controller {
 
     public function remove_product($id)
     {
-        $this->db->delete('product', array('item_id' => $id));
+        $this->db->where('item_name', $id);
+        $this->db->delete('product');
+
     }
 
     public function current_products()
