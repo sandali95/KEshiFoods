@@ -35,7 +35,7 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"> <i class="fa fa-circle-o"></i> Add a bill</a></li>
+                    <li><a href="<?php echo base_url(); ?>index.php/Bill"> <i class="fa fa-circle-o"></i> Add a bill</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> View Bills</a>
                     </li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
