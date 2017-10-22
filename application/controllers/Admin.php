@@ -22,18 +22,7 @@ class Admin extends CI_Controller{
 			$this->load->model('model_admin');
 			$this->model_admin->insertdata();
 			//$this->get_data();
-			$this->load->model('model_admin');
-			$data=$this->model_admin->fetch_data();
-			$this->load->view('view_data',array('data' => $data));
-			$this->load->model('Model_admin');
-			$this->Model_admin->insertdata();
-			$this->load->view('employee.php');
-			//$this->load->model('Model_admin');
-			//$data=$this->model_admin->fetch_data();
-			//$this->load->view('view_data',array('data' => $data));
-
-			
-	
+			$this->load->view('viewEmployee');
 		}
 		else{
 
