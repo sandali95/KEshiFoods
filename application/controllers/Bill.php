@@ -3,9 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Bill extends CI_Controller {
 
-  
-
-
     public function index(){
         $this->load->view('billadd');
 
@@ -13,14 +10,8 @@ class Bill extends CI_Controller {
             'products'=>$this->Product_model->current_products()
         );
         var_dump($data);*/
-    
-
 
     }
-
-
-
-
 
         public function Bill_add()
     {

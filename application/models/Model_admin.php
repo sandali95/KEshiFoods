@@ -1,4 +1,4 @@
- <?php
+<?php
 class Model_admin extends CI_Model{
 	function insertdata(){
 		$data=array(
@@ -19,20 +19,7 @@ class Model_admin extends CI_Model{
 		//$res=array();
 		if($result->num_rows()>0){
 			return $result->result_array();
-
-			/*foreach($data as $row){
-				$data=array(
-					'Eid'=>$row->Eid,
-					'Name'=>$row->Name,
-					'Gender'=>$row->Gender,
-					'Contact_Number'=>$row->Contact_Number,
-					'Address'=>$row->Address,
-					'etype'=>$row->etype
-			);
-			array_push($res,$data);*/
-			}
-
 		}
-		
 
 	}
+}
