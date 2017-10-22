@@ -85,7 +85,7 @@
 
                    <div class="form-group col-lg-4">
                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name= "id" id="item_name">
-                           <option>Enter Item Descrition</option>
+                           <option>Enter Item Description</option>
                            <?php foreach ($products as $a){ ?>
                                <option>
                                    <?php echo $a['item_name'] ; ?>
@@ -107,7 +107,7 @@
                     <!-- /.Remove Button -->
                     <div class="col-lg-2" style="float: right">
                         <br>
-                        <a href="<?php echo base_url();?>index.php/Product/remove?id=$id" class="btn btn-block btn-danger" name="remove_btn" ><i class="fa  fa-check-circle"> Remove Stock </i></a>
+                        <a onclick="removeitem();" class="btn btn-block btn-danger" name="remove_btn" ><i class="fa  fa-check-circle"> Remove Stock </i></a>
                     </div>
                 </div>
                 </form>
@@ -135,6 +135,7 @@
                     /*console.log('Hello :D');
                     console.log(data.product);*/
                     $("#update_form").html(data);
+					console.log(data);
                 },
                 error: function (data) {
                     console.log('error');
@@ -143,7 +144,10 @@
         });
 
     </script>
-
-
-
+	<script>
+		function removeitem(){
+			var id = document.getElementById('item_no').value;
+			//console.log(id);
+			location.href = "<?php echo base_url();?>index.php/Product/remove?id="+id;
+		}
     </script>

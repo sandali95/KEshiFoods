@@ -30,7 +30,7 @@ class Product_model extends CI_Controller {
 
     public function remove_product($id)
     {
-        $this->db->where('item_name', $id);
+        $this->db->where('item_id', $id);
         $this->db->delete('product');
 
     }

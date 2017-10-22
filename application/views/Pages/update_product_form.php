@@ -1,7 +1,7 @@
 
 <div class="form-group col-lg-3">
     <label for="item_no">Item No</label>
-    <input type="text" name="item_no" class="form-control" value="<?php echo $item_no ;?> " disabled>
+    <input type="text" name="item_no" id="item_no" class="form-control" value="<?php echo $item_no ;?> " disabled>
 </div>
 
     <!-- /.form-group -->

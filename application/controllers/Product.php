@@ -55,11 +55,12 @@ class Product extends CI_Controller {
 
 
 
-    public function remove($id)
+    public function remove()
     {   echo "<h1>Remove</h1>";
         $this->load->model('Product_model');
-//      $item_name = $this->input->post('item_name');
-        $this->Product_model->remove_product($id);
+		$item_id = $this->input->get('id');
+		
+        $this->Product_model->remove_product($item_id);
         redirect('/Product');
     }
 
@@ -119,6 +120,7 @@ class Product extends CI_Controller {
     {
 
         $this->load->model('Product_model');
+		
         $item_name = $this->input->post('item_name');
         var_dump($item_name);
 
