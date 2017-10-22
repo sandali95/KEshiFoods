@@ -33,8 +33,13 @@
             <?php } ?>
          -->
 
+            <!-- <?php if (isset($error_msg)){?>
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h4><i class="icon fa fa-ban"></i></h4>Invalid filed inputs
 
-
+                </div>
+            <?php } ?> -->
 
 
             <div class="box-body">
@@ -60,6 +65,7 @@
                         <label for="Name">Name</label>  
                         <input type="text" name="name" class="form-control" placeholder="Employee Name">
                     </div>
+                   
 
                 </div>
 
@@ -87,6 +93,14 @@
                      <div class="form-group col-lg-4">
                         <label>Employee Type :</label>
                         <input type="text" name="etype" class="form-control" placeholder="Employee Type">
+                    </div>
+                <div class="row">
+                    <div class="form-group col-lg-4">
+                        <label for="Operation">Operation</label>
+                        <a href="#">Update</a> 
+                        <a href="#">Delete</a>
+
+
                     </div>
                 </div>
                     <div class="col-lg-2" style="float: right">

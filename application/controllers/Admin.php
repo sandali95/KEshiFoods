@@ -27,8 +27,9 @@ class Admin extends CI_Controller{
 	
 		}
 		else{
+			$data['error_msg']='error';
 		
-			$this->load->view('employee.php');
+			$this->load->view('employee.php',$data);
 		}
 	}
 	public function get_data(){
