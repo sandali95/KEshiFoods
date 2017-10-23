@@ -56,7 +56,7 @@ class Product extends CI_Controller {
 
 
     public function remove()
-    {   echo "<h1>Remove</h1>";
+    {
         $this->load->model('Product_model');
 		$item_id = $this->input->get('id');
 		
@@ -80,9 +80,9 @@ class Product extends CI_Controller {
             return;
         }
 
-        $item_id = $this->input->post('item_no');
-        $item_name =$this->input->post('item_name');
-        $item_price =$this->input->post('item_price');
+        $item_id = $this->input->get('no');
+        $item_name =$this->input->get('name');
+        $item_price =$this->input->get('price');
         ;
 
 

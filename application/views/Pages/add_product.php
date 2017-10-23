@@ -102,7 +102,7 @@
                     <!-- /.Update Button -->
                     <div class="col-lg-2" style="float: right">
                         <br>
-                        <a href="<?php echo base_url();?>index.php/Product/update?id=$id" class="btn btn-block btn-primary" name="update_btn" ><i class="fa  fa-check-circle"> Update Stock</i></a>
+                        <a onclick="updateitem()" class="btn btn-block btn-primary" name="update_btn" ><i class="fa  fa-check-circle"> Update Stock</i></a>
                     </div>
                     <!-- /.Remove Button -->
                     <div class="col-lg-2" style="float: right">
@@ -150,4 +150,12 @@
 			//console.log(id);
 			location.href = "<?php echo base_url();?>index.php/Product/remove?id="+id;
 		}
+
+        function updateitem(){
+            var id = document.getElementById('item_no').value;
+            var name = document.getElementById('item_name').value;
+            var price = document.getElementById('item_price').value;
+            //console.log(id);
+            location.href = "<?php echo base_url();?>index.php/Product/update?id="+id+"&name="+name+"&price="+price;
+        }
     </script>

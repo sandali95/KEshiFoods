@@ -10,7 +10,7 @@
     <?php include "Imports/styles.php" ?>
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body style="background-color: #0E2231 ">
 <div class="wrapper">
 
     <!-- Content Wrapper. Contains page content -->
@@ -27,7 +27,7 @@
             <div class="lockscreen-image">
                 <img src="<?php echo base_url() ?>assets/dist/img/user1-128x128.jpg" alt="User Image">
             </div>
-            <!-- /.lockscreen-image -->
+
 
             <!-- lockscreen credentials (contains the form) -->
             <form class="lockscreen-credentials" method="POST" action="<?php echo base_url(); ?>index.php/Welcome/login_check">
@@ -52,10 +52,10 @@
 
 
 
+    <!-- Footer -->
 
 </div>
-<!-- Footer -->
-<?php include "Imports/footer.php" ?>
+
 
 <!-- JS include -->
 <?php include 'Imports/js.php' ?>
