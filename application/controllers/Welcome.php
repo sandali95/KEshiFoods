@@ -25,7 +25,7 @@ class Welcome extends CI_Controller {
 
 	public function login_check()
     {
-        $username = $_POST['username'];
+       /* $username = $_POST['username'];
         $userpass = $_POST['password'];
 
 
@@ -41,7 +41,16 @@ class Welcome extends CI_Controller {
                 </div>
                 ";
             $this->load->view('login');
-        }
+        }*/
+        $username=$this->input->post('username');
+		$password=$this->input->post('password');
+
+		$this->load->model('Model_login');
+        $data=$this->Model_login->login($username,$password);
+		/*if ($password==$data) {
+            $this->load->view('home');
+        }*/
+       
 
     }
 }
