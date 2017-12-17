@@ -7,7 +7,6 @@ class View_bills extends CI_Controller
     {
         $this->load->model('Billview_model');
         $bill =$this->Billview_model->get_bill();
-       // var_dump($stock);
         $data =array(
             'bill'=>$bill
         );

@@ -2,12 +2,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Stock
+            Bill
             <small>View</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Stocks</li>
+            <li class="active">Bills</li>
         </ol>
     </section>
     <br>
@@ -34,7 +34,6 @@
                                     <td><?php echo $a['date']?></td>
                                     <td><?php echo $a['customer_name']?></td>
                                     <td><?php echo $a['total_val']?></td>
-                                    <!--<td> <a href="<?php echo base_url();?>index.php/View_stocks/view_item/<?php echo $a['stock_id']?>/<?php echo $a['stock_name']?>"><i class="fa fa-info-circle"></i></a></td>-->
                                 </tr>
                             <?php } ?>
 
