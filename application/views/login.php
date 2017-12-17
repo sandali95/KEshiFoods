@@ -30,10 +30,10 @@
 
 
             <!-- lockscreen credentials (contains the form) -->
-            <form class="lockscreen-credentials" method="POST" action="<?php echo base_url(); ?>index.php/Welcome/login_check">
+            <form class="lockscreen-credentials" method="POST" action="<?php echo base_url(); ?>index.php/Login/login_check">
                 <div class="input-group">
-                    <input name="username" type="text" class="form-control" placeholder="User Name" autofocus>
-                    <input name="password" type="password" class="form-control" placeholder="password">
+                    <input name="username" type="text" class="form-control" placeholder="User Name" autofocus required>
+                    <input name="password" type="password" class="form-control" placeholder="password" required>
 
                     <div class="input-group-btn">
                         <a href=""><button type="submit button" class="btn"><i class="fa fa-arrow-right text-muted"></i></button></a>
@@ -42,11 +42,18 @@
             </form>
             <!-- /lockscreen credentials -->
 
+
         </div>
         <!-- /.lockscreen-item -->
         <div class="help-block text-center">
             Enter your credentials to login
         </div>
+            <div align="center">
+               <?php if ($this->session->flashdata('err')) {
+                echo "<h3 style='color:red'>".$this->session->flashdata('err')."<h3>";
+                } 
+                ?>
+            </div>
 
     </div>
 

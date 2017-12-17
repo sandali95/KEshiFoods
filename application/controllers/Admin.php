@@ -1,6 +1,10 @@
 <?php
 class Admin extends CI_Controller{
 	public function index(){
+		$this->load->view('home');
+	}
+
+	public function load_employee(){
 		$this->load->view('addEmployee');
 	}
 
@@ -16,10 +20,10 @@ class Admin extends CI_Controller{
 		if($this->form_validation->run()==True){
 			$this->load->model('Model_admin');
 			$this->Model_admin->insertdata();
-			//$this->load->view('addEmployee');
-		}
+			$this->session->set_flashdata('suc','Successfully added');
+			redirect('Admin/load_employee');		}
 		else{
-			$this->session->set_flashdata('err','');
+			//$this->session->set_flashdata('err','');
 			$this->load->view('addEmployee');
 		}
 	}
