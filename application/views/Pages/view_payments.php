@@ -34,7 +34,6 @@
                                     <td><?php echo $a['month']?></td>
                                     <td><?php echo $a['date']?></td>
                                     <td><?php echo $a['amount']?></td>
-                                    <!--<td> <a href="<?php echo base_url();?>index.php/View_stocks/view_item/<?php echo $a['stock_id']?>/<?php echo $a['stock_name']?>"><i class="fa fa-info-circle"></i></a></td>-->
                                 </tr>
                             <?php } ?>
 
