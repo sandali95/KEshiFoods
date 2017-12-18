@@ -3,7 +3,10 @@
 <!-- Font Awesome -->
 <link rel="stylesheet" href="<?php echo base_url()?>assets/bower_components/font-awesome/css/font-awesome.min.css">
 <!-- Ionicons -->
-<link rel="stylesheet" href=<?php echo base_url()?>"assets/bower_components/Ionicons/css/ionicons.min.css">
+<link rel="stylesheet" href="<?php echo base_url()?>assets/bower_components/Ionicons/css/ionicons.min.css">
+<!-- searchbar styles -->
+<link rel="stylesheet" href="<?php echo base_url()?>assets/dist/css/search.css">
+
 
 
 <!-- Theme style -->

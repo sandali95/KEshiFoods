@@ -12,11 +12,6 @@ class Bill_model extends CI_Model {
         'date'=> $this->input->post('date'),
         'customer_name'=> $this->input->post('cname',TRUE),
         'total_val'=> $this->input->post('tvalue',TRUE)
-        
-
-
-
-
 
          );
 
@@ -33,4 +28,3 @@ class Bill_model extends CI_Model {
     }
 
 }
-
