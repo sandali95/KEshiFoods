@@ -25,7 +25,7 @@ class Stock extends CI_Controller
 
 
         $this->form_validation->set_rules('item_name','Item Name','required');
-        $this->form_validation->set_rules('item_quantity','Item Price','required');
+        $this->form_validation->set_rules('item_quantity','Item Price','required|numeric');
         $this->form_validation->set_rules('invoice_no','Invoice No','required');
         $this->form_validation->set_rules('invoice_date','Invoice Date','required');
 
@@ -44,7 +44,7 @@ class Stock extends CI_Controller
         $item_quantity =$this->input->post('item_quantity');
         $invoice_no =$this->input->post('invoice_no');
         $invoice_date =$this->input->post('invoice_date');
-        var_dump($invoice_date);
+        //var_dump($invoice_date);
 
         $item_no =$this->Stock_model->get_itemNo($item_name);//get the item number from the db
         $data=array(

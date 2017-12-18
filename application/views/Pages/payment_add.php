@@ -2,13 +2,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Sales
-            <small>Management</small>
+            Payment
+            <small></small>
         </h1>
-        <ol class="breadcrumb">
+       <!--  <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Stocks</li>
-        </ol>
+        </ol> -->
     </section>
 
    <!--h4><?php echo $message; ?></h4> 
@@ -30,27 +30,41 @@
                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
                 </div>
             </div>
-
+<!-- 
             <?php if (isset($error_message)){ ?>
                 <div class="alert alert-danger alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                     <h4><i class="icon fa fa-ban"></i></h4>Invalid filed inputs
 
                 </div>
-            <?php } ?>
+            <?php } ?> -->
+           <div align="center">
+            <?php echo validation_errors('<div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>','</div>'); ?>
+               <?php if ($this->session->flashdata('suc')) {
+                //echo "<div class='alert alert-success'>successfully added</div>";
+                echo "<div class='alert alert-success alert-dismissible'>
+                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+                <h4><i class='icon fa fa-check'></i>Successfully Added</h4>
+              </div>";
+                } 
+                ?>
+            </div>
             <!-- /.box-header -->
             <div class="box-body">
                 <form role="form" method="post" action="<?php echo base_url(); ?>index.php/Payment/Payment_add">
                 <div class="row">
                         <div class="form-group col-lg-3">
                             <label for="item_no">Employee Id</label>
-                            <input type="number" name="eid" class="form-control" placeholder="Enter EID">
+                            <input type="number" name="eid" class="form-control" placeholder="Enter EID" required>
                         </div>
 
 
                          <div class="form-group col-lg-3">
                             <label for="item_price">Month</label>
-                            <input type="text" name="month" class="form-control" placeholder="Enter Month">
+                            <input type="text" name="month" class="form-control" placeholder="Enter Month" required>
                         </div>
                         <!-- /.form-group -->
                        
@@ -58,12 +72,12 @@
 
                             <div class="form-group col-lg-3">
                             <label for="item_price">Date </label>
-                            <input type="Date" name="date" class="form-control" placeholder="Enter date ">
+                            <input type="Date" name="date" class="form-control" placeholder="Enter date " required>
                         </div>
                      
                         <div class="form-group col-lg-3">
                             <label for="item_price">Pay Amount</label>
-                            <input type="number" name="amount" class="form-control" placeholder="Enter Amount">
+                            <input type="number" name="amount" class="form-control" placeholder="Enter Amount" required>
                         </div>
 
                        

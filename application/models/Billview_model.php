@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Billview_model extends CI_Controller {
+class Billview_model extends CI_Model {
 
 
     public function get_bill()

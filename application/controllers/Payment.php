@@ -16,39 +16,22 @@ class Payment extends CI_Controller {
         public function Payment_add()
     {
 
-        $this->form_validation->set_rules('eid', 'Employee name', 'required');
+        $this->form_validation->set_rules('eid', 'Employee name', 'required|numeric');
         $this->form_validation->set_rules('month', 'Month', 'required');
         $this->form_validation->set_rules('date', 'Date ', 'required');
-        $this->form_validation->set_rules('amount', 'Pay Amount', 'required');
+        $this->form_validation->set_rules('amount', 'Pay Amount', 'required|numeric');
         
-
-        if ($this->form_validation->run() == FALSE)
-                {
-
-                        $data['error_message']='error';
-                        $this->load->view('addpayment',$data);
-                }
-                else
-                {
-                       $this->load->model('Payment_model');
-                      $res= $this->Payment_model->Insert_data();
-                       $this->load->view('addpayment');
-
-                   /* if($res){
-                        $this->session->set_flashdata('message','You are login succcusfully..!');
-                        $this->load->view('billadd');
-                       }else{
-                        $this->session->set_flashdata('message','Error');
-                        $this->load->view('billadd');
-
-                       }*/
+        if($this->form_validation->run() != FALSE){
+          $this->load->model('Payment_model');
+          $res= $this->Payment_model->Insert_data();
+          $this->session->set_flashdata('suc','Successfully added');
+          redirect('Payment/index');
+         }
 
 
-                     
-                   }
-               }
+   }
 
-         public function viewbill()
+     public function viewbill()
          {
             $this->load->model('Payment_model');
             $data['data'] = $this->Muser->fetch_data();

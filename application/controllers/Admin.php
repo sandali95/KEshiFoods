@@ -10,7 +10,7 @@ class Admin extends CI_Controller{
 
 	public function emp_register(){
 
-		$this->form_validation->set_rules('eid','Employee id','required|numeric');
+		$this->form_validation->set_rules('eid','Employee id','required|numeric|is_unique[users.username]');
 		$this->form_validation->set_rules('name','Name','required');
 		$this->form_validation->set_rules('gender','Gender','required');
 		$this->form_validation->set_rules('cnumber','contact','required');
