@@ -24,18 +24,12 @@
                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
                 </div>
             </div>
-
-<!--             <?php echo validation_errors('<div class="alert alert-danger alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>','</div>');
-            ?> -->
+            <?php echo validation_errors('<div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>','</div>'); ?>
 
             <!-- /.box-header -->
-
-
-
-
 
             <div class="box-body">
                 <form role="form" method="post" action="<?php echo base_url(); ?>index.php/stock/add_stock">
@@ -48,7 +42,7 @@
                     <!-- /.form-group -->
                     <div class="form-group col-lg-4">
                         <label>Item Name</label>
-                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="item_name" required>
+                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="item_name">
                             <?php foreach ($stock as $a){ ?>
                                 <option>
                                     <?php echo $a ; ?>
@@ -59,7 +53,7 @@
                     <!-- /.form-group -->
                     <div class="form-group col-lg-4">
                         <label for="item_price">Item Quantity</label>
-                        <input type="text" name="item_quantity" class="form-control" placeholder="Enter Quantity" required>
+                        <input type="text" name="item_quantity" class="form-control" placeholder="Enter Quantity">
                     </div>
 
                 </div>
@@ -68,20 +62,14 @@
                     <!-- /.form-group -->
                     <div class="form-group col-lg-4">
                         <label for="invoice_no">Invoice No</label>
-                        <input type="text" name="invoice no" class="form-control" placeholder="Enter stock Invoice number" required>
+                        <input type="text" name="invoice no" class="form-control" placeholder="Enter stock Invoice number">
                     </div>
                     <!-- /.form-group -->
                     <div class="form-group col-lg-4">
-                        <label>Invoice Date :</label>
-                        <div class="input-group date" data-provide="datepicker">
-                            <div class="input-group-addon">
-                                <span class="glyphicon glyphicon-th"></span>
-                            </div>
-                            <input type="text" name="invoice_date" class="form-control" required>
+                          <label>Invoice Date :</label>
+                          <input type="Date" name="date" class="form-control" placeholder="Enter Date">
+                      </div>
 
-                        </div>
-
-                    </div>
                     <!-- /.form-group -->
                     <div class="col-lg-2" style="float: right">
                         <br>
@@ -105,12 +93,14 @@
                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
                 </div>
             </div>
-<!--
-            <?php echo validation_errors('<div class="alert alert-danger alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>','</div>');
-            ?>-->
+
+            <?php if (isset($error_message2)){?>
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h5><i class="icon fa fa-ban"></i>Invalid Field Inputs !</h5>
+
+                </div>
+            <?php } ?>
 
             <!-- /.box-header -->
             <div class="box-body">
@@ -118,7 +108,7 @@
                     <!-- input -->
                     <div class="form-group col-lg-4">
                         <label>Item Name</label>
-                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="item_name" required>
+                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="item_name">
                             <?php foreach ($stock as $a){ ?>
                                 <option>
                                     <?php echo $a ; ?>
@@ -128,7 +118,7 @@
                     </div>
                     <div class="form-group col-lg-4">
                         <label>Item Quantity :</label>
-                        <input type="text" name="item_quantity" class="form-control" placeholder="Enter Quantity" required>
+                        <input type="text" name="item_quantity" class="form-control" placeholder="Enter Quantity">
                     </div>
                     <div class="col-lg-2" style="float: right">
                         </br>

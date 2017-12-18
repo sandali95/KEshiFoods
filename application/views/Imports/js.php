@@ -13,6 +13,8 @@
 <!-- Morris.js charts -->
 <script src="<?php echo base_url()?>assets/bower_components/raphael/raphael.min.js"></script>
 <script src="<?php echo base_url()?>assets/bower_components/morris.js/morris.min.js"></script>
+<!-- ChartJS -->
+<script src="<?php echo base_url()?>assets/Chart.min.js"></script>
 <!-- Sparkline -->
 <script src="<?php echo base_url()?>assets/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->

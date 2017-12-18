@@ -20,7 +20,7 @@ class Bill extends CI_Controller {
         $this->form_validation->set_rules('date', 'Date', 'required');
         $this->form_validation->set_rules('cname', 'Customer Name ', 'required');
         $this->form_validation->set_rules('tvalue', 'Total Value', 'required');
-        
+
 
         if ($this->form_validation->run() == FALSE)
                 {
@@ -44,7 +44,7 @@ class Bill extends CI_Controller {
                        }*/
 
 
-                     
+
                    }
                }
 

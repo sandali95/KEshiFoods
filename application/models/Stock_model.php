@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Stock_model extends CI_Model {
+class Stock_model extends CI_Controller {
 
     public function add_stockItem($data,$stock)
     {//update the stock quantity

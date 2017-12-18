@@ -16,13 +16,19 @@
 
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
-
-            <li class="active treeview">
-                <a href="<?php echo base_url(); ?>index.php/Welcome">
-                    <i class="fa fa-dashboard"></i> Dashboard
-                </a>
-
-            </li>
+          <!-- home -->
+          <li class="treeview">
+              <a href="">
+                  <i class="fa fa-shopping-cart"></i> <span>Dashbord</span>
+                  <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+              </a>
+              <ul class="treeview-menu">
+                  <li><a href="<?php echo base_url(); ?>index.php/Welcome"> <i class="fa fa-circle-o"></i>Home</a></li>
+                  <li><a href=""> <i class="fa fa-circle-o"></i>Report</a></li>
+              </ul>
+          </li>
             <!--Sales -->
             <li class="treeview">
                 <a href="">
@@ -66,7 +72,7 @@
                 </a>
                 <ul class="treeview-menu">
 
-                    <li><a href="<?php echo base_url(); ?>index.php/Admin/load_employee"><i class="fa fa-circle-o"></i> Add Employee</a></li>
+                    <li><a href="<?php echo base_url(); ?>index.php/Admin"><i class="fa fa-circle-o"></i> Add Employee</a></li>
                     <li><a href="<?php echo base_url(); ?>index.php/Admin/get_data"><i class="fa fa-circle-o"></i> View Employee</a></li>
                     <li><a href="<?php echo base_url(); ?>index.php/Payment"><i class="fa fa-circle-o"></i> Add Payments</a></li>
                     <li><a href="<?php echo base_url(); ?>index.php/View_payments"><i class="fa fa-circle-o"></i> View Payments</a></li>
