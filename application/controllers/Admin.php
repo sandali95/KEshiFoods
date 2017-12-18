@@ -13,7 +13,7 @@ class Admin extends CI_Controller{
 		$this->form_validation->set_rules('eid','Employee id','required|numeric|is_unique[users.username]');
 		$this->form_validation->set_rules('name','Name','required');
 		$this->form_validation->set_rules('gender','Gender','required');
-		$this->form_validation->set_rules('cnumber','contact','required');
+		$this->form_validation->set_rules('cnumber','contact','required|numeric|max_length[10]|min_length[10]');
 		$this->form_validation->set_rules('address','Address','required');
 		$this->form_validation->set_rules('etype','Employee Type','required');
 

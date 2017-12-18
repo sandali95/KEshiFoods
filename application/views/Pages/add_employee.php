@@ -48,12 +48,21 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="form-group col-lg-4">
                         <label for="gender">Gender</label>
                         <input type="text" name="gender" class="form-control" placeholder="Male/Female" required>
                     </div>
-                </div>
+                </div> -->
+
+                 <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" id="sel1" name="gender" style="width:32%;">
+                        <option>Choose one</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div> 
 
                 <div class="row">
                     <div class="form-group col-lg-4">
@@ -69,11 +78,14 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="form-group col-lg-4">
-                        <label for="Employee Type">Employee Type</label>
-                        <input type="text" name="etype" class="form-control" placeholder="Employee Type" required>
-                    </div>
+                 <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" id="sel1" name="gender" style="width:32%;">
+                        <option>Choose one</option>
+                        <option>Manager</option>
+                        <option>Sales Officer</option>
+                        <option>Sales Manager</option>
+                    </select>
                 </div>
               
                     <!-- /.form-group -->
